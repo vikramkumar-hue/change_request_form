@@ -1,0 +1,495 @@
+name: "Change Request"
+description: "Formal production-grade change request requiring approval"
+title: "CR: "
+labels: ["change-request", "pending-approval"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Change Request Information
+        Complete all required fields before submission. All changes require appropriate stakeholder approval.
+
+  - type: input
+    id: request_date
+    attributes:
+      label: "Request Date"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: input
+    id: requested_by
+    attributes:
+      label: "Requested By"
+      placeholder: "Name of requester"
+    validations:
+      required: true
+
+  - type: input
+    id: client_name
+    attributes:
+      label: "Client / Organization Name"
+      placeholder: "Enter client or organization"
+    validations:
+      required: true
+
+  - type: input
+    id: project_name
+    attributes:
+      label: "Project Name"
+      placeholder: "Enter project name"
+    validations:
+      required: true
+
+  - type: input
+    id: approved_by
+    attributes:
+      label: "Approved By"
+      placeholder: "Approving authority"
+    validations:
+      required: true
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary of Change"
+      placeholder: "Short summary"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: "Implementation Complexity"
+      options:
+        - "Simple - Minor adjustments"
+        - "Medium - Multiple components"
+        - "Complex - Significant changes"
+        - "Major - Architectural impact"
+      default: 1
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Detailed Change Description"
+      placeholder: "Provide a detailed and comprehensive description of the requested change"
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_justification
+    attributes:
+      label: "Business Justification"
+      placeholder: "Explain the business need and expected benefits"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_areas
+    attributes:
+      label: "Affected Areas"
+      description: "Select all areas impacted by this change"
+      options:
+        - label: "Frontend"
+        - label: "Backend"
+        - label: "Database"
+        - label: "API / Integration"
+        - label: "Application Code"
+        - label: "Configuration"
+        - label: "User Interface"
+        - label: "Security"
+        - label: "Performance"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependencies / Impacted Components"
+      placeholder: "List upstream/downstream components impacted"
+      description: "Optional"
+
+  - type: input
+    id: implemented_by
+    attributes:
+      label: "Implemented By"
+      placeholder: "Name of implementer (optional)"
+
+  - type: input
+    id: implementation_date
+    attributes:
+      label: "Implementation Date"
+      placeholder: "YYYY-MM-DD (optional)"
+
+  - type: textarea
+    id: implementation_plan
+    attributes:
+      label: "Implementation Plan"
+      placeholder: "Describe step-by-step plan for implementation"
+
+  - type: textarea
+    id: testing_approach
+    attributes:
+      label: "Testing Strategy"
+      placeholder: "Describe how this change will be tested prior to deployment"
+
+  - type: textarea
+    id: rollback_plan
+    attributes:
+      label: "Rollback Plan"
+      placeholder: "Describe procedure to revert changes if issues occur"
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Risks & Mitigation"
+      placeholder: "List potential risks and mitigation strategies"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note:** Ensure all mandatory fields are completed. Attach logs, screenshots, or documents if needed.
+name: "Change Request"
+description: "Formal production-grade change request requiring approval"
+title: "CR: "
+labels: ["change-request", "pending-approval"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Change Request Information
+        Complete all required fields before submission. All changes require appropriate stakeholder approval.
+
+  - type: input
+    id: request_date
+    attributes:
+      label: "Request Date"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: input
+    id: requested_by
+    attributes:
+      label: "Requested By"
+      placeholder: "Name of requester"
+    validations:
+      required: true
+
+  - type: input
+    id: client_name
+    attributes:
+      label: "Client / Organization Name"
+      placeholder: "Enter client or organization"
+    validations:
+      required: true
+
+  - type: input
+    id: project_name
+    attributes:
+      label: "Project Name"
+      placeholder: "Enter project name"
+    validations:
+      required: true
+
+  - type: input
+    id: approved_by
+    attributes:
+      label: "Approved By"
+      placeholder: "Approving authority"
+    validations:
+      required: true
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary of Change"
+      placeholder: "Short summary"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: "Implementation Complexity"
+      options:
+        - "Simple - Minor adjustments"
+        - "Medium - Multiple components"
+        - "Complex - Significant changes"
+        - "Major - Architectural impact"
+      default: 1
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Detailed Change Description"
+      placeholder: "Provide a detailed and comprehensive description of the requested change"
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_justification
+    attributes:
+      label: "Business Justification"
+      placeholder: "Explain the business need and expected benefits"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_areas
+    attributes:
+      label: "Affected Areas"
+      description: "Select all areas impacted by this change"
+      options:
+        - label: "Frontend"
+        - label: "Backend"
+        - label: "Database"
+        - label: "API / Integration"
+        - label: "Application Code"
+        - label: "Configuration"
+        - label: "User Interface"
+        - label: "Security"
+        - label: "Performance"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependencies / Impacted Components"
+      placeholder: "List upstream/downstream components impacted"
+      description: "Optional"
+
+  - type: input
+    id: implemented_by
+    attributes:
+      label: "Implemented By"
+      placeholder: "Name of implementer (optional)"
+
+  - type: input
+    id: implementation_date
+    attributes:
+      label: "Implementation Date"
+      placeholder: "YYYY-MM-DD (optional)"
+
+  - type: textarea
+    id: implementation_plan
+    attributes:
+      label: "Implementation Plan"
+      placeholder: "Describe step-by-step plan for implementation"
+
+  - type: textarea
+    id: testing_approach
+    attributes:
+      label: "Testing Strategy"
+      placeholder: "Describe how this change will be tested prior to deployment"
+
+  - type: textarea
+    id: rollback_plan
+    attributes:
+      label: "Rollback Plan"
+      placeholder: "Describe procedure to revert changes if issues occur"
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Risks & Mitigation"
+      placeholder: "List potential risks and mitigation strategies"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note:** Ensure all mandatory fields are completed. Attach logs, screenshots, or documents if needed.
+name: "Change Request"
+description: "Formal production-grade change request requiring approval"
+title: "CR: "
+labels: ["change-request", "pending-approval"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Change Request Information
+        Complete all required fields before submission. All changes require appropriate stakeholder approval.
+
+  - type: input
+    id: request_date
+    attributes:
+      label: "Request Date"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: input
+    id: requested_by
+    attributes:
+      label: "Requested By"
+      placeholder: "Name of requester"
+    validations:
+      required: true
+
+  - type: input
+    id: client_name
+    attributes:
+      label: "Client / Organization Name"
+      placeholder: "Enter client or organization"
+    validations:
+      required: true
+
+  - type: input
+    id: project_name
+    attributes:
+      label: "Project Name"
+      placeholder: "Enter project name"
+    validations:
+      required: true
+
+  - type: input
+    id: approved_by
+    attributes:
+      label: "Approved By"
+      placeholder: "Approving authority"
+    validations:
+      required: true
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary of Change"
+      placeholder: "Short summary"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: "Implementation Complexity"
+      options:
+        - "Simple - Minor adjustments"
+        - "Medium - Multiple components"
+        - "Complex - Significant changes"
+        - "Major - Architectural impact"
+      default: 1
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Detailed Change Description"
+      placeholder: "Provide a detailed and comprehensive description of the requested change"
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_justification
+    attributes:
+      label: "Business Justification"
+      placeholder: "Explain the business need and expected benefits"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_areas
+    attributes:
+      label: "Affected Areas"
+      description: "Select all areas impacted by this change"
+      options:
+        - label: "Frontend"
+        - label: "Backend"
+        - label: "Database"
+        - label: "API / Integration"
+        - label: "Application Code"
+        - label: "Configuration"
+        - label: "User Interface"
+        - label: "Security"
+        - label: "Performance"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependencies / Impacted Components"
+      placeholder: "List upstream/downstream components impacted"
+      description: "Optional"
+
+  - type: input
+    id: implemented_by
+    attributes:
+      label: "Implemented By"
+      placeholder: "Name of implementer (optional)"
+
+  - type: input
+    id: implementation_date
+    attributes:
+      label: "Implementation Date"
+      placeholder: "YYYY-MM-DD (optional)"
+
+  - type: textarea
+    id: implementation_plan
+    attributes:
+      label: "Implementation Plan"
+      placeholder: "Describe step-by-step plan for implementation"
+
+  - type: textarea
+    id: testing_approach
+    attributes:
+      label: "Testing Strategy"
+      placeholder: "Describe how this change will be tested prior to deployment"
+
+  - type: textarea
+    id: rollback_plan
+    attributes:
+      label: "Rollback Plan"
+      placeholder: "Describe procedure to revert changes if issues occur"
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Risks & Mitigation"
+      placeholder: "List potential risks and mitigation strategies"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note:** Ensure all mandatory fields are completed. Attach logs, screenshots, or documents if needed.
